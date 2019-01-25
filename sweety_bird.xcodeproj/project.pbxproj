@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6412C6B3202805DA002E0198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6B2202805DA002E0198 /* AppDelegate.swift */; };
+		6412C6B7202805DA002E0198 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6412C6B6202805DA002E0198 /* Assets.xcassets */; };
+		6412C6BA202805DA002E0198 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6412C6B8202805DA002E0198 /* Main.storyboard */; };
+		6412C6C6202805DB002E0198 /* sweety_bird_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6C5202805DB002E0198 /* sweety_bird_tests.swift */; };
+		6412C6E42028063E002E0198 /* WorkspaceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6E22028063E002E0198 /* WorkspaceDelegate.swift */; };
+		6412C6E62028064B002E0198 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6E52028064B002E0198 /* TextViewController.swift */; };
+		645931B6202AA17800B48677 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 645931B5202AA17800B48677 /* LICENSE.txt */; };
+		64843643202CAD6E00558C47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64843642202CAD6E00558C47 /* AppDelegate.swift */; };
+		64843647202CAD6E00558C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64843646202CAD6E00558C47 /* Assets.xcassets */; };
+		6484364A202CAD6E00558C47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64843648202CAD6E00558C47 /* Main.storyboard */; };
+		64843652202CAE4500558C47 /* sweety_bird_launcher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 64843640202CAD6E00558C47 /* sweety_bird_launcher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6412C6C2202805DB002E0198 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6412C6A7202805DA002E0198 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6412C6AE202805DA002E0198;
+			remoteInfo = famliar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6412C6EF20280CDB002E0198 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6412C6F020280CF0002E0198 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64843651202CAE2C00558C47 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				64843652202CAE4500558C47 /* sweety_bird_launcher.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6412C6AF202805DA002E0198 /* sweety_bird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sweety_bird.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6412C6B2202805DA002E0198 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 2; };
+		6412C6B6202805DA002E0198 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6412C6B9202805DA002E0198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6412C6BB202805DA002E0198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6412C6BC202805DA002E0198 /* sweety_bird.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sweety_bird.entitlements; sourceTree = "<group>"; };
+		6412C6C1202805DB002E0198 /* sweety_birdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sweety_birdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6412C6C5202805DB002E0198 /* sweety_bird_tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sweety_bird_tests.swift; sourceTree = "<group>"; };
+		6412C6C7202805DB002E0198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6412C6E22028063E002E0198 /* WorkspaceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkspaceDelegate.swift; sourceTree = "<group>"; };
+		6412C6E52028064B002E0198 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		645931B5202AA17800B48677 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		645931B9202AA54800B48677 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		64843640202CAD6E00558C47 /* sweety_bird_launcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sweety_bird_launcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		64843642202CAD6E00558C47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		64843646202CAD6E00558C47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		64843649202CAD6E00558C47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6484364B202CAD6E00558C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6484364C202CAD6E00558C47 /* sweety_bird_launcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sweety_bird_launcher.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6412C6AC202805DA002E0198 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6412C6BE202805DB002E0198 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6484363D202CAD6E00558C47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6412C6A6202805DA002E0198 = {
+			isa = PBXGroup;
+			children = (
+				645931B9202AA54800B48677 /* README.md */,
+				645931B5202AA17800B48677 /* LICENSE.txt */,
+				6412C6B1202805DA002E0198 /* sweety_bird */,
+				6412C6C4202805DB002E0198 /* sweety_bird_tests */,
+				64843641202CAD6E00558C47 /* sweety_bird_launcher */,
+				6412C6B0202805DA002E0198 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6412C6B0202805DA002E0198 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6412C6AF202805DA002E0198 /* sweety_bird.app */,
+				6412C6C1202805DB002E0198 /* sweety_birdTests.xctest */,
+				64843640202CAD6E00558C47 /* sweety_bird_launcher.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6412C6B1202805DA002E0198 /* sweety_bird */ = {
+			isa = PBXGroup;
+			children = (
+				6412C6D12028061B002E0198 /* appkit */,
+				6412C6D020280616002E0198 /* ui */,
+				6412C6B2202805DA002E0198 /* AppDelegate.swift */,
+				6412C6B6202805DA002E0198 /* Assets.xcassets */,
+				6412C6B8202805DA002E0198 /* Main.storyboard */,
+				6412C6BB202805DA002E0198 /* Info.plist */,
+				6412C6BC202805DA002E0198 /* sweety_bird.entitlements */,
+			);
+			path = sweety_bird;
+			sourceTree = "<group>";
+		};
+		6412C6C4202805DB002E0198 /* sweety_bird_tests */ = {
+			isa = PBXGroup;
+			children = (
+				6412C6C5202805DB002E0198 /* sweety_bird_tests.swift */,
+				6412C6C7202805DB002E0198 /* Info.plist */,
+			);
+			path = sweety_bird_tests;
+			sourceTree = "<group>";
+		};
+		6412C6D020280616002E0198 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				6412C6E52028064B002E0198 /* TextViewController.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		6412C6D12028061B002E0198 /* appkit */ = {
+			isa = PBXGroup;
+			children = (
+				6412C6E22028063E002E0198 /* WorkspaceDelegate.swift */,
+			);
+			path = appkit;
+			sourceTree = "<group>";
+		};
+		64843641202CAD6E00558C47 /* sweety_bird_launcher */ = {
+			isa = PBXGroup;
+			children = (
+				64843642202CAD6E00558C47 /* AppDelegate.swift */,
+				64843646202CAD6E00558C47 /* Assets.xcassets */,
+				64843648202CAD6E00558C47 /* Main.storyboard */,
+				6484364B202CAD6E00558C47 /* Info.plist */,
+				6484364C202CAD6E00558C47 /* sweety_bird_launcher.entitlements */,
+			);
+			path = sweety_bird_launcher;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6412C6AE202805DA002E0198 /* sweety_bird */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6412C6CA202805DB002E0198 /* Build configuration list for PBXNativeTarget "sweety_bird" */;
+			buildPhases = (
+				6412C6AB202805DA002E0198 /* Sources */,
+				6412C6AC202805DA002E0198 /* Frameworks */,
+				6412C6AD202805DA002E0198 /* Resources */,
+				6412C6EF20280CDB002E0198 /* Embed Frameworks */,
+				6412C6F020280CF0002E0198 /* CopyFiles */,
+				64843651202CAE2C00558C47 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sweety_bird;
+			productName = famliar;
+			productReference = 6412C6AF202805DA002E0198 /* sweety_bird.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6412C6C0202805DB002E0198 /* sweety_birdTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6412C6CD202805DB002E0198 /* Build configuration list for PBXNativeTarget "sweety_birdTests" */;
+			buildPhases = (
+				6412C6BD202805DB002E0198 /* Sources */,
+				6412C6BE202805DB002E0198 /* Frameworks */,
+				6412C6BF202805DB002E0198 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6412C6C3202805DB002E0198 /* PBXTargetDependency */,
+			);
+			name = sweety_birdTests;
+			productName = famliarTests;
+			productReference = 6412C6C1202805DB002E0198 /* sweety_birdTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6484363F202CAD6E00558C47 /* sweety_bird_launcher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6484364D202CAD6E00558C47 /* Build configuration list for PBXNativeTarget "sweety_bird_launcher" */;
+			buildPhases = (
+				6484363C202CAD6E00558C47 /* Sources */,
+				6484363D202CAD6E00558C47 /* Frameworks */,
+				6484363E202CAD6E00558C47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sweety_bird_launcher;
+			productName = familiar_launcher;
+			productReference = 64843640202CAD6E00558C47 /* sweety_bird_launcher.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6412C6A7202805DA002E0198 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Raphael Spencer";
+				TargetAttributes = {
+					6412C6AE202805DA002E0198 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					6412C6C0202805DB002E0198 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6412C6AE202805DA002E0198;
+					};
+					6484363F202CAD6E00558C47 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 6412C6AA202805DA002E0198 /* Build configuration list for PBXProject "sweety_bird" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6412C6A6202805DA002E0198;
+			productRefGroup = 6412C6B0202805DA002E0198 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6412C6AE202805DA002E0198 /* sweety_bird */,
+				6412C6C0202805DB002E0198 /* sweety_birdTests */,
+				6484363F202CAD6E00558C47 /* sweety_bird_launcher */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6412C6AD202805DA002E0198 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				645931B6202AA17800B48677 /* LICENSE.txt in Resources */,
+				6412C6B7202805DA002E0198 /* Assets.xcassets in Resources */,
+				6412C6BA202805DA002E0198 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6412C6BF202805DB002E0198 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6484363E202CAD6E00558C47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64843647202CAD6E00558C47 /* Assets.xcassets in Resources */,
+				6484364A202CAD6E00558C47 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6412C6AB202805DA002E0198 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6412C6E42028063E002E0198 /* WorkspaceDelegate.swift in Sources */,
+				6412C6B3202805DA002E0198 /* AppDelegate.swift in Sources */,
+				6412C6E62028064B002E0198 /* TextViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6412C6BD202805DB002E0198 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6412C6C6202805DB002E0198 /* sweety_bird_tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6484363C202CAD6E00558C47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64843643202CAD6E00558C47 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6412C6C3202805DB002E0198 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6412C6AE202805DA002E0198 /* sweety_bird */;
+			targetProxy = 6412C6C2202805DB002E0198 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6412C6B8202805DA002E0198 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6412C6B9202805DA002E0198 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		64843648202CAD6E00558C47 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64843649202CAD6E00558C47 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6412C6C8202805DB002E0198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6412C6C9202805DB002E0198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		6412C6CB202805DB002E0198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = sweety_bird/sweety_bird.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = D48QC892LT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = sweety_bird/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphaeltraviss.sweety_bird;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		6412C6CC202805DB002E0198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = sweety_bird/sweety_bird.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = D48QC892LT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = sweety_bird/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphaeltraviss.sweety_bird;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		6412C6CE202805DB002E0198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = D48QC892LT;
+				INFOPLIST_FILE = sweety_bird_tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphaeltraviss.sweety_bird_tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sweety_bird.app/Contents/MacOS/sweety_bird";
+			};
+			name = Debug;
+		};
+		6412C6CF202805DB002E0198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = D48QC892LT;
+				INFOPLIST_FILE = sweety_bird_tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphaeltraviss.sweety_bird_tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sweety_bird.app/Contents/MacOS/sweety_bird";
+			};
+			name = Release;
+		};
+		6484364E202CAD6E00558C47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = sweety_bird_launcher/sweety_bird_launcher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = D48QC892LT;
+				INFOPLIST_FILE = sweety_bird/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphaeltraviss.sweety_bird_launcher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		6484364F202CAD6E00558C47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = sweety_bird_launcher/sweety_bird_launcher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = D48QC892LT;
+				INFOPLIST_FILE = sweety_bird/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphaeltraviss.sweety_bird_launcher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6412C6AA202805DA002E0198 /* Build configuration list for PBXProject "sweety_bird" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6412C6C8202805DB002E0198 /* Debug */,
+				6412C6C9202805DB002E0198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6412C6CA202805DB002E0198 /* Build configuration list for PBXNativeTarget "sweety_bird" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6412C6CB202805DB002E0198 /* Debug */,
+				6412C6CC202805DB002E0198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6412C6CD202805DB002E0198 /* Build configuration list for PBXNativeTarget "sweety_birdTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6412C6CE202805DB002E0198 /* Debug */,
+				6412C6CF202805DB002E0198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6484364D202CAD6E00558C47 /* Build configuration list for PBXNativeTarget "sweety_bird_launcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6484364E202CAD6E00558C47 /* Debug */,
+				6484364F202CAD6E00558C47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6412C6A7202805DA002E0198 /* Project object */;
+}
