@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="TaskItem" customModule="sweety_bird" customModuleProvider="target">
+            <connections>
+                <outlet property="created_label" destination="3k1-Vc-dAF" id="5Rp-DP-XYY"/>
+                <outlet property="detail_label" destination="sDb-kl-Ocy" id="nRO-wn-52d"/>
+                <outlet property="title_label" destination="iNs-MS-TEo" id="fpF-5p-bD2"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView identifier="task_item" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="67"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frd-SH-b5K">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="67"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iNs-MS-TEo">
+                            <rect key="frame" x="-2" y="50" width="62" height="17"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="Task Title" id="PG6-bF-oDC">
+                                <font key="font" usesAppearanceFont="YES"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sDb-kl-Ocy">
+                            <rect key="frame" x="-2" y="25" width="39" height="17"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="Detail" id="OUj-ez-nZE">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3k1-Vc-dAF">
+                            <rect key="frame" x="-2" y="0.0" width="68" height="17"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="Created at" id="yq5-zj-ryz">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="frd-SH-b5K" secondAttribute="trailing" id="8N2-fN-y7W"/>
+                <constraint firstAttribute="bottom" secondItem="frd-SH-b5K" secondAttribute="bottom" id="Jav-WO-N5J"/>
+                <constraint firstItem="frd-SH-b5K" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="ksV-Jf-dhe"/>
+                <constraint firstItem="frd-SH-b5K" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="oSy-9a-tAK"/>
+            </constraints>
+        </customView>
+    </objects>
+</document>
