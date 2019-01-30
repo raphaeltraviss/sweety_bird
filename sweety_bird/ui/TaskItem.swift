@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class TaskItem: NSViewController {
+class TaskItem: NSCollectionViewItem {
 
   @IBOutlet weak var title_label: NSTextField!
   @IBOutlet weak var detail_label: NSTextField!

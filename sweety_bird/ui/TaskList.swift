@@ -8,6 +8,9 @@ import Cocoa
 
 class TaskList: NSViewController {
   
+  // MARK: constants
+  let item_id = NSUserInterfaceItemIdentifier(rawValue: "task_item")
+  
   // MARK: public API
   
   var tasks = [Task]() { didSet {
@@ -21,9 +24,25 @@ class TaskList: NSViewController {
   // MARK: UI outlets
   
   @IBOutlet weak var coll_view: NSCollectionView! { didSet {
-    let id = NSUserInterfaceItemIdentifier(rawValue: "task_item")
-    coll_view.register(TaskItem.self, forItemWithIdentifier: id)
+    coll_view.register(TaskItem.self, forItemWithIdentifier: item_id)
+    coll_view.dataSource = self
   }}
+}
+
+extension TaskList: NSCollectionViewDataSource {
+  func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
+    return tasks.count
+  }
+  
+  func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
+    guard let item = coll_view.makeItem(withIdentifier: item_id, for: indexPath) as? TaskItem else { fatalError() }
+    item.title_label.stringValue = "Title"
+    item.detail_label.stringValue = "Details"
+    item.created_label.stringValue = "Created at X"
+    return item
+  }
+  
+  
 }
 
 extension TaskList {
