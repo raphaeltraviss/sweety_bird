@@ -18,7 +18,7 @@ let launcher_app_id = "com.raphaeltraviss.sweety_bird_launcher"
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
   let statusItem = NSStatusBar.system.statusItem(withLength: 28.0)
-  let task_list = TaskList()
+  let task_list = TaskList.instance_from_sb()
   
 
   var system_delegate: WorkspaceDelegate?
@@ -52,26 +52,27 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   }
   
   func applicationDidFinishLaunching(_ aNotification: Notification) {
-    check_and_close_launcher()
+    //check_and_close_launcher()
     
     if let button = statusItem.button {
       button.image = NSImage(named: NSImage.Name("birdseye_menubar"))
+      button.action = #selector(showPopover)
     }
     
     
-    self.login_menu_item = NSMenuItem(title: "Start at login", action: #selector(self.toggle_login_start), keyEquivalent: "l")
+//    self.login_menu_item = NSMenuItem(title: "Start at login", action: #selector(self.toggle_login_start), keyEquivalent: "l")
     let launch_enabled = UserDefaults.standard.bool(forKey: "will_launch_at_login")
-    self.login_menu_item!.state = launch_enabled ? .on : .off
+//    self.login_menu_item!.state = launch_enabled ? .on : .off
     
     
-    let menu = NSMenu()
-    menu.addItem(NSMenuItem(title: "Another option (quit, right now)", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "1"))
-    menu.addItem(NSMenuItem.separator())
-    menu.addItem(self.login_menu_item!)
-    menu.addItem(NSMenuItem(title: "Quit sweety_bird", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+//    let menu = NSMenu()
+//    menu.addItem(NSMenuItem(title: "Another option (quit, right now)", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "1"))
+//    menu.addItem(NSMenuItem.separator())
+//    menu.addItem(self.login_menu_item!)
+//    menu.addItem(NSMenuItem(title: "Quit sweety_bird", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+//
+//    statusItem.menu = menu
 
-    statusItem.menu = menu
-    
     popover.contentViewController = task_list
     task_list.tasks = [
       Task(title: "task 1", detail: "The first task", created_at: Date()),
@@ -83,8 +84,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       Task(title: "task 7", detail: "The seventh task", created_at: Date()),
       Task(title: "task 8", detail: "The eigth task", created_at: Date()),
     ]
-    
-    
   }
   
   func applicationWillTerminate(_ aNotification: Notification) {
