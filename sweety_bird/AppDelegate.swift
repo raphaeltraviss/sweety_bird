@@ -73,6 +73,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //
 //    statusItem.menu = menu
 
+    popover.contentSize = NSSize(width: 340.0, height: 640.0)
     popover.contentViewController = task_list
     task_list.tasks = [
       Task(title: "task 1", detail: "The first task", created_at: Date()),

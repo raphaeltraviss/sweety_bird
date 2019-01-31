@@ -27,6 +27,10 @@ class TaskList: NSViewController {
     coll_view.register(TaskItem.self, forItemWithIdentifier: item_id)
     coll_view.dataSource = self
   }}
+  
+  // MARK: lifecycle
+  
+  
 }
 
 extension TaskList: NSCollectionViewDataSource {
