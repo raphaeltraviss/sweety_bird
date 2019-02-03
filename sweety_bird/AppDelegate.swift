@@ -15,6 +15,7 @@ extension Notification.Name {
 
 let launcher_app_id = "com.raphaeltraviss.sweety_bird_launcher"
 
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
   let statusItem = NSStatusBar.system.statusItem(withLength: 28.0)
@@ -76,14 +77,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     popover.contentSize = NSSize(width: 340.0, height: 640.0)
     popover.contentViewController = task_list
     task_list.tasks = [
-      Task(title: "task 1", detail: "The first task", created_at: Date()),
-      Task(title: "task 2", detail: "The second task", created_at: Date()),
-      Task(title: "task 3", detail: "The third task", created_at: Date()),
-      Task(title: "task 4", detail: "The fourth task", created_at: Date()),
-      Task(title: "task 5", detail: "The fifth task", created_at: Date()),
-      Task(title: "task 6", detail: "The sixth task", created_at: Date()),
-      Task(title: "task 7", detail: "The seventh task", created_at: Date()),
-      Task(title: "task 8", detail: "The eigth task", created_at: Date()),
+      Task(title: "task 1", detail: "The first task", created_at: 1.days_ago()),
+      Task(title: "task 2", detail: "The second task", created_at: 2.days_ago()),
+      Task(title: "task 3", detail: "The third task", created_at: 3.days_ago()),
+      Task(title: "task 4", detail: "The fourth task", created_at: 4.days_ago()),
+      Task(title: "task 5", detail: "The fifth task", created_at: 5.days_ago()),
+      Task(title: "task 6", detail: "The sixth task", created_at: 6.days_ago()),
+      Task(title: "task 7", detail: "The seventh task", created_at: 7.days_ago()),
+      Task(title: "task 8", detail: "The eigth task", created_at: 8.days_ago()),
     ]
   }
   
@@ -133,3 +134,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 }
 
 
+extension Int {
+  func days_ago() -> Date {
+    return Calendar.current.date(byAdding: .day, value: self, to: Date())!
+  }
+}
