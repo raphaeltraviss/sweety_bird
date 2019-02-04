@@ -679,7 +679,52 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="-174" y="14"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dvN-IF-w97">
+            <objects>
+                <viewController id="oTb-5l-2n3" sceneMemberID="viewController">
+                    <customView key="view" id="x5H-bH-Jle">
+                        <rect key="frame" x="0.0" y="0.0" width="477" height="831"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <stackView distribution="fillProportionally" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ROn-ia-WZK">
+                                <rect key="frame" x="0.0" y="783" width="477" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="cM7-hl-cKW"/>
+                                </constraints>
+                            </stackView>
+                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="mlw-lr-jbH">
+                                <rect key="frame" x="0.0" y="48" width="477" height="735"/>
+                                <connections>
+                                    <segue destination="XfG-lQ-9wD" kind="embed" id="Ee5-3x-3vz"/>
+                                </connections>
+                            </containerView>
+                            <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7w5-TU-cYa">
+                                <rect key="frame" x="0.0" y="0.0" width="477" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Q2R-BH-LzR"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ROn-ia-WZK" firstAttribute="leading" secondItem="x5H-bH-Jle" secondAttribute="leading" id="HsP-MT-ep9"/>
+                            <constraint firstItem="mlw-lr-jbH" firstAttribute="leading" secondItem="x5H-bH-Jle" secondAttribute="leading" id="KSc-xa-TsT"/>
+                            <constraint firstAttribute="trailing" secondItem="7w5-TU-cYa" secondAttribute="trailing" id="Lea-f1-lZG"/>
+                            <constraint firstItem="7w5-TU-cYa" firstAttribute="top" secondItem="mlw-lr-jbH" secondAttribute="bottom" id="QXN-FC-PeK"/>
+                            <constraint firstAttribute="bottom" secondItem="7w5-TU-cYa" secondAttribute="bottom" id="cVE-gK-htq"/>
+                            <constraint firstAttribute="trailing" secondItem="ROn-ia-WZK" secondAttribute="trailing" id="evc-I6-ZBN"/>
+                            <constraint firstItem="mlw-lr-jbH" firstAttribute="top" secondItem="ROn-ia-WZK" secondAttribute="bottom" id="ey4-Ax-hvE"/>
+                            <constraint firstAttribute="trailing" secondItem="mlw-lr-jbH" secondAttribute="trailing" id="n0W-aa-MzE"/>
+                            <constraint firstItem="7w5-TU-cYa" firstAttribute="leading" secondItem="x5H-bH-Jle" secondAttribute="leading" id="xPS-qC-8Es"/>
+                            <constraint firstItem="ROn-ia-WZK" firstAttribute="top" secondItem="x5H-bH-Jle" secondAttribute="top" id="xXh-vI-QFc"/>
+                        </constraints>
+                    </customView>
+                </viewController>
+                <customObject id="MS3-3t-wYR" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-201.5" y="524.5"/>
         </scene>
         <!--Task List-->
         <scene sceneID="hIz-AP-VOD">
@@ -720,7 +765,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="483" y="284"/>
         </scene>
     </scenes>
 </document>
