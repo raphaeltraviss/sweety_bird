@@ -686,45 +686,89 @@
             <objects>
                 <viewController id="oTb-5l-2n3" sceneMemberID="viewController">
                     <customView key="view" id="x5H-bH-Jle">
-                        <rect key="frame" x="0.0" y="0.0" width="477" height="831"/>
+                        <rect key="frame" x="0.0" y="0.0" width="451" height="597"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
-                            <stackView distribution="fillProportionally" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ROn-ia-WZK">
-                                <rect key="frame" x="0.0" y="783" width="477" height="48"/>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="1mN-Ib-zH1">
+                                <rect key="frame" x="0.0" y="549" width="451" height="48"/>
+                                <subviews>
+                                    <stackView distribution="equalCentering" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ROn-ia-WZK">
+                                        <rect key="frame" x="136" y="6" width="180" height="36"/>
+                                        <subviews>
+                                            <button horizontalCompressionResistancePriority="248" verticalCompressionResistancePriority="248" translatesAutoresizingMaskIntoConstraints="NO" id="qa3-md-N4i">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="36"/>
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSAdvanced" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="U9F-qv-Wxt">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                            <button horizontalCompressionResistancePriority="247" verticalCompressionResistancePriority="247" translatesAutoresizingMaskIntoConstraints="NO" id="Xih-MT-rCX">
+                                                <rect key="frame" x="73" y="0.0" width="19" height="36"/>
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSBluetoothTemplate" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="cdd-qv-zzE">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                            <button horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="745" translatesAutoresizingMaskIntoConstraints="NO" id="mzT-4O-gn2">
+                                                <rect key="frame" x="100" y="0.0" width="80" height="36"/>
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSFolder" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="JVY-oj-fc6">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="anU-Oa-NdI"/>
+                                            <constraint firstAttribute="height" constant="36" id="jd6-dk-uMv"/>
+                                        </constraints>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="cM7-hl-cKW"/>
+                                    <constraint firstItem="ROn-ia-WZK" firstAttribute="centerY" secondItem="1mN-Ib-zH1" secondAttribute="centerY" id="ADk-bU-5bs"/>
+                                    <constraint firstAttribute="height" constant="48" id="hNm-hg-AxR"/>
+                                    <constraint firstItem="ROn-ia-WZK" firstAttribute="centerX" secondItem="1mN-Ib-zH1" secondAttribute="centerX" id="s63-ML-66d"/>
                                 </constraints>
-                            </stackView>
+                            </customView>
                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="mlw-lr-jbH">
-                                <rect key="frame" x="0.0" y="48" width="477" height="735"/>
+                                <rect key="frame" x="0.0" y="48" width="451" height="501"/>
                                 <connections>
                                     <segue destination="XfG-lQ-9wD" kind="embed" id="Ee5-3x-3vz"/>
                                 </connections>
                             </containerView>
                             <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7w5-TU-cYa">
-                                <rect key="frame" x="0.0" y="0.0" width="477" height="48"/>
+                                <rect key="frame" x="0.0" y="0.0" width="451" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Q2R-BH-LzR"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="ROn-ia-WZK" firstAttribute="leading" secondItem="x5H-bH-Jle" secondAttribute="leading" id="HsP-MT-ep9"/>
+                            <constraint firstItem="1mN-Ib-zH1" firstAttribute="leading" secondItem="x5H-bH-Jle" secondAttribute="leading" id="5mQ-ed-sEy"/>
                             <constraint firstItem="mlw-lr-jbH" firstAttribute="leading" secondItem="x5H-bH-Jle" secondAttribute="leading" id="KSc-xa-TsT"/>
                             <constraint firstAttribute="trailing" secondItem="7w5-TU-cYa" secondAttribute="trailing" id="Lea-f1-lZG"/>
                             <constraint firstItem="7w5-TU-cYa" firstAttribute="top" secondItem="mlw-lr-jbH" secondAttribute="bottom" id="QXN-FC-PeK"/>
+                            <constraint firstItem="1mN-Ib-zH1" firstAttribute="top" secondItem="x5H-bH-Jle" secondAttribute="top" id="VaR-QI-OlZ"/>
                             <constraint firstAttribute="bottom" secondItem="7w5-TU-cYa" secondAttribute="bottom" id="cVE-gK-htq"/>
-                            <constraint firstAttribute="trailing" secondItem="ROn-ia-WZK" secondAttribute="trailing" id="evc-I6-ZBN"/>
-                            <constraint firstItem="mlw-lr-jbH" firstAttribute="top" secondItem="ROn-ia-WZK" secondAttribute="bottom" id="ey4-Ax-hvE"/>
+                            <constraint firstAttribute="trailing" secondItem="1mN-Ib-zH1" secondAttribute="trailing" id="jlf-pw-POQ"/>
                             <constraint firstAttribute="trailing" secondItem="mlw-lr-jbH" secondAttribute="trailing" id="n0W-aa-MzE"/>
+                            <constraint firstItem="mlw-lr-jbH" firstAttribute="top" secondItem="1mN-Ib-zH1" secondAttribute="bottom" id="pT1-Iy-rXm"/>
                             <constraint firstItem="7w5-TU-cYa" firstAttribute="leading" secondItem="x5H-bH-Jle" secondAttribute="leading" id="xPS-qC-8Es"/>
-                            <constraint firstItem="ROn-ia-WZK" firstAttribute="top" secondItem="x5H-bH-Jle" secondAttribute="top" id="xXh-vI-QFc"/>
                         </constraints>
                     </customView>
                 </viewController>
                 <customObject id="MS3-3t-wYR" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-201.5" y="524.5"/>
+            <point key="canvasLocation" x="-174.5" y="407.5"/>
         </scene>
         <!--Task List-->
         <scene sceneID="hIz-AP-VOD">
@@ -768,4 +812,9 @@
             <point key="canvasLocation" x="483" y="284"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSAdvanced" width="32" height="32"/>
+        <image name="NSBluetoothTemplate" width="7" height="14"/>
+        <image name="NSFolder" width="32" height="32"/>
+    </resources>
 </document>
