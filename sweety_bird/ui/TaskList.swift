@@ -59,14 +59,3 @@ extension TaskList: NSCollectionViewDataSource {
   
   
 }
-
-extension TaskList {
-  static func instance_from_sb() -> TaskList {
-    let sb = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
-    let id = NSStoryboard.SceneIdentifier(rawValue: "TaskList")
-    guard let vc = sb.instantiateController(withIdentifier: id) as? TaskList else {
-      fatalError("GWARRRR!!  WHERE DAT VIEW CONTROLLER!!??? - Check Main.storyboard")
-    }
-    return vc
-  }
-}

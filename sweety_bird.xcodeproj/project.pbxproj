@@ -21,6 +21,7 @@
 		64843647202CAD6E00558C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64843646202CAD6E00558C47 /* Assets.xcassets */; };
 		6484364A202CAD6E00558C47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64843648202CAD6E00558C47 /* Main.storyboard */; };
 		64843652202CAE4500558C47 /* sweety_bird_launcher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 64843640202CAD6E00558C47 /* sweety_bird_launcher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		64CBD8AB2209E40900EB740C /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CBD8AA2209E40900EB740C /* Frame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		64843649202CAD6E00558C47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6484364B202CAD6E00558C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6484364C202CAD6E00558C47 /* sweety_bird_launcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sweety_bird_launcher.entitlements; sourceTree = "<group>"; };
+		64CBD8AA2209E40900EB740C /* Frame.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; tabWidth = 2; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				6412C6E52028064B002E0198 /* TaskList.swift */,
 				6466B8EA21FFC0DF00C90C40 /* TaskItem.swift */,
 				6466B8EB21FFC0DF00C90C40 /* TaskItem.xib */,
+				64CBD8AA2209E40900EB740C /* Frame.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				6466B8E921FFBFCF00C90C40 /* Task.swift in Sources */,
 				6466B8EC21FFC0DF00C90C40 /* TaskItem.swift in Sources */,
 				6412C6E42028063E002E0198 /* WorkspaceDelegate.swift in Sources */,
+				64CBD8AB2209E40900EB740C /* Frame.swift in Sources */,
 				6412C6B3202805DA002E0198 /* AppDelegate.swift in Sources */,
 				6412C6E62028064B002E0198 /* TaskList.swift in Sources */,
 			);

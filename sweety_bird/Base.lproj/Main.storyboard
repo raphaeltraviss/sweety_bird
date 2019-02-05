@@ -681,10 +681,10 @@
             </objects>
             <point key="canvasLocation" x="-174" y="14"/>
         </scene>
-        <!--View Controller-->
+        <!--Frame-->
         <scene sceneID="dvN-IF-w97">
             <objects>
-                <viewController id="oTb-5l-2n3" sceneMemberID="viewController">
+                <viewController identifier="Frame" storyboardIdentifier="Frame" id="oTb-5l-2n3" customClass="Frame" customModule="sweety_bird" customModuleProvider="target" sceneMemberID="viewController">
                     <customView key="view" id="x5H-bH-Jle">
                         <rect key="frame" x="0.0" y="0.0" width="451" height="597"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -692,51 +692,31 @@
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="1mN-Ib-zH1">
                                 <rect key="frame" x="0.0" y="549" width="451" height="48"/>
                                 <subviews>
-                                    <stackView distribution="equalCentering" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ROn-ia-WZK">
-                                        <rect key="frame" x="136" y="6" width="180" height="36"/>
-                                        <subviews>
-                                            <button horizontalCompressionResistancePriority="248" verticalCompressionResistancePriority="248" translatesAutoresizingMaskIntoConstraints="NO" id="qa3-md-N4i">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="36"/>
-                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSAdvanced" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="U9F-qv-Wxt">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="system"/>
-                                                </buttonCell>
-                                            </button>
-                                            <button horizontalCompressionResistancePriority="247" verticalCompressionResistancePriority="247" translatesAutoresizingMaskIntoConstraints="NO" id="Xih-MT-rCX">
-                                                <rect key="frame" x="73" y="0.0" width="19" height="36"/>
-                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSBluetoothTemplate" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="cdd-qv-zzE">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="system"/>
-                                                </buttonCell>
-                                            </button>
-                                            <button horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="745" translatesAutoresizingMaskIntoConstraints="NO" id="mzT-4O-gn2">
-                                                <rect key="frame" x="100" y="0.0" width="80" height="36"/>
-                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSFolder" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="JVY-oj-fc6">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="system"/>
-                                                </buttonCell>
-                                            </button>
-                                        </subviews>
+                                    <button ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wp8-Mb-54A">
+                                        <rect key="frame" x="0.0" y="6" width="48" height="36"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="180" id="anU-Oa-NdI"/>
-                                            <constraint firstAttribute="height" constant="36" id="jd6-dk-uMv"/>
+                                            <constraint firstAttribute="height" constant="36" id="Jtu-JV-sr9"/>
                                         </constraints>
-                                        <visibilityPriorities>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                        </visibilityPriorities>
-                                        <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                        </customSpacing>
-                                    </stackView>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSFolderSmart" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="IGX-XY-NTK">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Lp2-SK-PUs">
+                                        <rect key="frame" x="167" y="5" width="119" height="39"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Birdseye" id="LQa-X1-eUE">
+                                            <font key="font" size="32" name="HelveticaNeue-Thin"/>
+                                            <color key="textColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="ROn-ia-WZK" firstAttribute="centerY" secondItem="1mN-Ib-zH1" secondAttribute="centerY" id="ADk-bU-5bs"/>
+                                    <constraint firstItem="Wp8-Mb-54A" firstAttribute="leading" secondItem="1mN-Ib-zH1" secondAttribute="leading" constant="8" id="Fvy-dN-OBO"/>
+                                    <constraint firstItem="Wp8-Mb-54A" firstAttribute="centerY" secondItem="1mN-Ib-zH1" secondAttribute="centerY" id="b7L-Wg-3UB"/>
                                     <constraint firstAttribute="height" constant="48" id="hNm-hg-AxR"/>
-                                    <constraint firstItem="ROn-ia-WZK" firstAttribute="centerX" secondItem="1mN-Ib-zH1" secondAttribute="centerX" id="s63-ML-66d"/>
+                                    <constraint firstItem="Lp2-SK-PUs" firstAttribute="centerY" secondItem="Wp8-Mb-54A" secondAttribute="centerY" id="peZ-3v-4Ps"/>
+                                    <constraint firstItem="Lp2-SK-PUs" firstAttribute="centerX" secondItem="1mN-Ib-zH1" secondAttribute="centerX" id="yu7-aY-5PI"/>
                                 </constraints>
                             </customView>
                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="mlw-lr-jbH">
@@ -813,8 +793,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="NSAdvanced" width="32" height="32"/>
-        <image name="NSBluetoothTemplate" width="7" height="14"/>
-        <image name="NSFolder" width="32" height="32"/>
+        <image name="NSFolderSmart" width="32" height="32"/>
     </resources>
 </document>
