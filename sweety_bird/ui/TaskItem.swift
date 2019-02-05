@@ -18,6 +18,6 @@ class TaskItem: NSCollectionViewItem {
   
   override func viewDidLoad() {
     view.wantsLayer = true
-    view.layer?.backgroundColor = NSColor(calibratedRed: 0.95, green: 0.95, blue: 0.95, alpha: 1.0).cgColor
+    view.layer?.backgroundColor = NSColor(calibratedRed: 0.90, green: 0.90, blue: 0.90, alpha: 1.0).cgColor
   }
 }
