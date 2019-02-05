@@ -12,18 +12,79 @@ class Frame: NSViewController {
   // MARK: private outlets
   var task_list: TaskList!
   
+  fileprivate lazy var formatter: DateFormatter = {
+    var formatter = DateFormatter()
+    formatter.dateFormat = "'Due on' MM/dd"
+    return formatter
+  }()
+  
+  func ui_time(_ date: Date) -> String {
+    return formatter.string(from: date)
+  }
+  
   // MARK: private helper methods
   fileprivate func init_task_list() {
     task_list.tasks = [
-      Task(title: "task 1", detail: "The first task", created_at: 1.days_ago()),
-      Task(title: "task 2", detail: "The second task", created_at: 2.days_ago()),
-      Task(title: "task 3", detail: "The third task", created_at: 3.days_ago()),
-      Task(title: "task 4", detail: "The fourth task", created_at: 4.days_ago()),
-      Task(title: "task 5", detail: "The fifth task", created_at: 5.days_ago()),
-      Task(title: "task 6", detail: "The sixth task", created_at: 6.days_ago()),
-      Task(title: "task 7", detail: "The seventh task", created_at: 7.days_ago()),
-      Task(title: "task 8", detail: "The eigth task", created_at: 8.days_ago()),
+      Task(id: 33, uuid: "asdf-asdf-asdf-asdf", title: "The first task", dueAt: ui_time(1.days_ago()), startAt: ui_time(Date()), completedAt: ui_time(Date())),
+      Task(id: 28, uuid: "qwer-qwer-qwer-qwer", title: "The second task", dueAt: ui_time(1.days_ago()), startAt: ui_time(Date()), completedAt: ui_time(Date())),
+      Task(id: 407, uuid: "zxcv-zxcv-zxcv-zxcv", title: "The third task", dueAt: ui_time(1.days_ago()), startAt: ui_time(Date()), completedAt: ui_time(Date())),
+      Task(id: 68, uuid: "fghj-fghj-fghj-fghj", title: "The fourth task", dueAt: ui_time(1.days_ago()), startAt: ui_time(Date()), completedAt: ui_time(Date())),
+      Task(id: 465, uuid: "vbnm-vbnm-vbnm-bvnm", title: "The fifth task", dueAt: ui_time(1.days_ago()), startAt: ui_time(Date()), completedAt: ui_time(Date())),
+      Task(id: 98, uuid: "rtyu-rtyu-rtyu-rtyu", title: "The sixth task", dueAt: ui_time(1.days_ago()), startAt: ui_time(Date()), completedAt: ui_time(Date())),
     ]
+  }
+  
+  struct TaskResponse : Codable {
+    var data: TaskContainer
+  }
+  struct TaskContainer: Codable {
+    var tasks: [Task]
+  }
+  
+  fileprivate func make_task_call() {
+    // Serialize the graphql query into a string
+    let headers = [
+      "content-type": "application/json",
+      "accept": "application/json",
+      "authorization": "Bearer SFMyNTY.g3QAAAACZAAEZGF0YW0AAAAkZmIxZmYyZDEtY2Q3OS00ZGE1LTlhYTQtNGZkZjg3NTVlOWU2ZAAGc2lnbmVkbgYAzatmvmgB.iyjqpKSaFi3STL4fFeOTigNvm1Rhhv_nWy69bRfBac4"
+    ]
+    let parameters = ["query": "{ tasks { id uuid title completedAt dueAt startAt } }"] as [String : Any]
+    guard let url = URL(string: "http://localhost:4000/graph") else { return }
+    guard let post_data = try? JSONSerialization.data(withJSONObject: parameters, options: []) else { return }
+    
+    var request = URLRequest(url: url)
+    request.httpMethod = "POST"
+    request.allHTTPHeaderFields = headers
+    request.httpBody = post_data
+    
+    let session = URLSession.shared
+    let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+      guard error == nil else { return }
+      guard let d = data else { return }
+      guard let json = try? JSONSerialization.jsonObject(with: d, options: .allowFragments) as! [String:Any] else { return }
+      guard let json_data = json["data"] as? [String: Any] else { return }
+      guard let task_data = json_data["tasks"] as? [[String: Any]] else { return }
+      let the_tasks = task_data.shuffled().prefix(10).map({ (task_data) -> Task? in
+        guard let id = task_data["id"] as? String else { return nil }
+        guard let uuid = task_data["uuid"] as? String else { return nil }
+        let title = task_data["title"] as? String
+        let dueAt = task_data["dueAt"] as? String
+        let completedAt = task_data["completedAt"] as? String
+        let startAt = task_data["startAt"] as? String
+        return Task(
+          id: Int(id)!,
+          uuid: uuid,
+          title: title ?? "something",
+          dueAt: completedAt ?? "yet to be completed",
+          startAt: startAt ?? "start date",
+          completedAt: completedAt ?? "completed date"
+        )
+      })
+
+      self.task_list.tasks = the_tasks.compactMap({ $0 })
+    })
+    
+    dataTask.resume()
   }
   
   // MARK: view controller lifecycle
@@ -31,6 +92,7 @@ class Frame: NSViewController {
     let the_list = segue.destinationController as! TaskList
     task_list = the_list
     init_task_list()
+    make_task_call()
   }
 }
 

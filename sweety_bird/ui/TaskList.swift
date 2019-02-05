@@ -51,9 +51,9 @@ extension TaskList: NSCollectionViewDataSource {
   func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
     let task = tasks[indexPath.item]
     guard let item = coll_view.makeItem(withIdentifier: item_id, for: indexPath) as? TaskItem else { fatalError() }
-    item.title_label.stringValue = task.title
-    item.detail_label.stringValue = task.detail
-    item.created_label.stringValue = ui_time(task.created_at)
+    item.title_label.stringValue = task.uuid
+    item.detail_label.stringValue = task.title
+    item.created_label.stringValue = task.dueAt
     return item
   }
   

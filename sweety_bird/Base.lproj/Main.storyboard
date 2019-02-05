@@ -703,7 +703,7 @@
                                         </buttonCell>
                                     </button>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Lp2-SK-PUs">
-                                        <rect key="frame" x="167" y="5" width="119" height="39"/>
+                                        <rect key="frame" x="166" y="5" width="119" height="39"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Birdseye" id="LQa-X1-eUE">
                                             <font key="font" size="32" name="HelveticaNeue-Thin"/>
                                             <color key="textColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
@@ -764,10 +764,10 @@
                                 <collectionView id="CSS-ih-pe7">
                                     <rect key="frame" x="0.0" y="0.0" width="448" height="158"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                    <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="tGa-91-wxE">
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="30" minimumLineSpacing="30" id="tGa-91-wxE">
                                         <size key="itemSize" width="300" height="80"/>
-                                        <size key="headerReferenceSize" width="0.0" height="20"/>
-                                        <size key="footerReferenceSize" width="0.0" height="20"/>
+                                        <size key="headerReferenceSize" width="0.0" height="30"/>
+                                        <size key="footerReferenceSize" width="0.0" height="30"/>
                                     </collectionViewFlowLayout>
                                     <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </collectionView>

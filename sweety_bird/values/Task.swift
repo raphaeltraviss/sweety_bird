@@ -6,8 +6,11 @@
 
 import Foundation
 
-struct Task {
+struct Task : Codable {
+  var id: Int
+  var uuid: String
   var title: String
-  var detail: String
-  var created_at: Date
+  var dueAt: String
+  var startAt: String
+  var completedAt: String
 }
