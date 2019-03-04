@@ -9,8 +9,20 @@
 import Cocoa
 
 class Frame: NSViewController {
+  
+  
   // MARK: private outlets
+  
   var task_list: TaskList!
+  
+  @IBOutlet weak var settings_button: NSButton!
+  
+  @IBOutlet weak var refresh_button: NSButton! { didSet {
+    refresh_button.action = #selector(make_task_call)
+  } }
+  
+  
+  // MARK: private helper methods
   
   fileprivate lazy var formatter: DateFormatter = {
     var formatter = DateFormatter()
@@ -22,8 +34,7 @@ class Frame: NSViewController {
     return formatter.string(from: date)
   }
   
-  // MARK: private helper methods
-  fileprivate func init_task_list() {
+  @objc func init_task_list() {
     task_list.tasks = [
       Task(id: 33, uuid: "asdf-asdf-asdf-asdf", title: "The first task", dueAt: ui_time(1.days_ago()), startAt: ui_time(Date()), completedAt: ui_time(Date())),
       Task(id: 28, uuid: "qwer-qwer-qwer-qwer", title: "The second task", dueAt: ui_time(1.days_ago()), startAt: ui_time(Date()), completedAt: ui_time(Date())),
@@ -36,33 +47,37 @@ class Frame: NSViewController {
   
   struct TaskResponse : Codable {
     var data: TaskContainer
-  }
-  struct TaskContainer: Codable {
-    var tasks: [Task]
+    
+    struct TaskContainer: Codable {
+      var tasks: [Task]
+    }
   }
   
-  fileprivate func make_task_call() {
+  
+  @objc func make_task_call() {
     // Serialize the graphql query into a string
-    let headers = [
-      "content-type": "application/json",
-      "accept": "application/json",
-      "authorization": "Bearer SFMyNTY.g3QAAAACZAAEZGF0YW0AAAAkZmIxZmYyZDEtY2Q3OS00ZGE1LTlhYTQtNGZkZjg3NTVlOWU2ZAAGc2lnbmVkbgYAzatmvmgB.iyjqpKSaFi3STL4fFeOTigNvm1Rhhv_nWy69bRfBac4"
-    ]
-    let parameters = ["query": "{ tasks { id uuid title completedAt dueAt startAt } }"] as [String : Any]
     guard let url = URL(string: "http://localhost:4000/graph") else { return }
-    guard let post_data = try? JSONSerialization.data(withJSONObject: parameters, options: []) else { return }
-    
     var request = URLRequest(url: url)
+    
+    request.addValue("application/json", forHTTPHeaderField: "content-type")
+    request.addValue("application/json", forHTTPHeaderField: "accept")
+    request.addValue("Bearer SFMyNTY.g3QAAAACZAAEZGF0YW0AAAAkZmIxZmYyZDEtY2Q3OS00ZGE1LTlhYTQtNGZkZjg3NTVlOWU2ZAAGc2lnbmVkbgYAZAxRSWkB.3Re5FgRaZgmG7ILt21pi5A3SGGHEwp9EmXsnTSyBfMc", forHTTPHeaderField: "authorization")
+    
     request.httpMethod = "POST"
-    request.allHTTPHeaderFields = headers
-    request.httpBody = post_data
+    let query: [String:Any] = ["query": "{ tasks { id uuid title completedAt dueAt startAt } }"]
+    guard let postData = try? JSONSerialization.data(withJSONObject: query, options: []) else { return }
+    guard let debug = String(bytes: postData, encoding: .utf8) else { return }
+    request.httpBody = postData as Data
     
     let session = URLSession.shared
     let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
       guard error == nil else { return }
       guard let d = data else { return }
-      guard let json = try? JSONSerialization.jsonObject(with: d, options: .allowFragments) as! [String:Any] else { return }
-      guard let json_data = json["data"] as? [String: Any] else { return }
+      
+      //  @TODO: use JSONEncoder instead of doing it manually.
+      guard let json = try? JSONSerialization.jsonObject(with: d, options: []) else { return }
+      guard let json_results = json as? [String: Any] else { return }
+      guard let json_data = json_results["data"] as? [String: Any] else { return }
       guard let task_data = json_data["tasks"] as? [[String: Any]] else { return }
       let the_tasks = task_data.shuffled().prefix(10).map({ (task_data) -> Task? in
         guard let id = task_data["id"] as? String else { return nil }
@@ -80,8 +95,10 @@ class Frame: NSViewController {
           completedAt: completedAt ?? "completed date"
         )
       })
-
-      self.task_list.tasks = the_tasks.compactMap({ $0 })
+      DispatchQueue.main.async {
+        self.task_list.tasks = the_tasks.compactMap({ $0 })
+      }
+      
     })
     
     dataTask.resume()
@@ -92,7 +109,6 @@ class Frame: NSViewController {
     let the_list = segue.destinationController as! TaskList
     task_list = the_list
     init_task_list()
-    make_task_call()
   }
 }
 

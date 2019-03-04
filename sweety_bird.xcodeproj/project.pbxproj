@@ -11,7 +11,6 @@
 		6412C6B7202805DA002E0198 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6412C6B6202805DA002E0198 /* Assets.xcassets */; };
 		6412C6BA202805DA002E0198 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6412C6B8202805DA002E0198 /* Main.storyboard */; };
 		6412C6C6202805DB002E0198 /* sweety_bird_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6C5202805DB002E0198 /* sweety_bird_tests.swift */; };
-		6412C6E42028063E002E0198 /* WorkspaceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6E22028063E002E0198 /* WorkspaceDelegate.swift */; };
 		6412C6E62028064B002E0198 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412C6E52028064B002E0198 /* TaskList.swift */; };
 		645931B6202AA17800B48677 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 645931B5202AA17800B48677 /* LICENSE.txt */; };
 		6466B8E921FFBFCF00C90C40 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466B8E821FFBFCF00C90C40 /* Task.swift */; };
@@ -76,7 +75,6 @@
 		6412C6C1202805DB002E0198 /* sweety_birdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sweety_birdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6412C6C5202805DB002E0198 /* sweety_bird_tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sweety_bird_tests.swift; sourceTree = "<group>"; };
 		6412C6C7202805DB002E0198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6412C6E22028063E002E0198 /* WorkspaceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkspaceDelegate.swift; sourceTree = "<group>"; };
 		6412C6E52028064B002E0198 /* TaskList.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; tabWidth = 2; };
 		645931B5202AA17800B48677 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		645931B9202AA54800B48677 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 		6412C6B1202805DA002E0198 /* sweety_bird */ = {
 			isa = PBXGroup;
 			children = (
-				6412C6D12028061B002E0198 /* appkit */,
 				6412C6D020280616002E0198 /* ui */,
 				6466B8E721FFBF9900C90C40 /* values */,
 				6412C6B2202805DA002E0198 /* AppDelegate.swift */,
@@ -172,14 +169,6 @@
 				64CBD8AA2209E40900EB740C /* Frame.swift */,
 			);
 			path = ui;
-			sourceTree = "<group>";
-		};
-		6412C6D12028061B002E0198 /* appkit */ = {
-			isa = PBXGroup;
-			children = (
-				6412C6E22028063E002E0198 /* WorkspaceDelegate.swift */,
-			);
-			path = appkit;
 			sourceTree = "<group>";
 		};
 		6466B8E721FFBF9900C90C40 /* values */ = {
@@ -342,7 +331,6 @@
 			files = (
 				6466B8E921FFBFCF00C90C40 /* Task.swift in Sources */,
 				6466B8EC21FFC0DF00C90C40 /* TaskItem.swift in Sources */,
-				6412C6E42028063E002E0198 /* WorkspaceDelegate.swift in Sources */,
 				64CBD8AB2209E40900EB740C /* Frame.swift in Sources */,
 				6412C6B3202805DA002E0198 /* AppDelegate.swift in Sources */,
 				6412C6E62028064B002E0198 /* TaskList.swift in Sources */,

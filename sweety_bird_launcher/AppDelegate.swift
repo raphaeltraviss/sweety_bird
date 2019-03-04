@@ -6,10 +6,6 @@
 
 import Cocoa
 
-extension Notification.Name {
-  static let close_launcher = Notification.Name("close_launcher")
-}
-
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
@@ -19,19 +15,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   }
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
-    let main_app_id = "com.raphaeltraviss.familiar"
+    let id = "com.raphaeltraviss.sweety_bird"
     let apps = NSWorkspace.shared.runningApplications
-    let main_is_running = apps.filter({ $0.bundleIdentifier == main_app_id }).count > 0
+    let sweety_bird_is_running = apps.filter({ $0.bundleIdentifier == id }).count > 0
     
     // If the launcher is already running, exit.
-    guard !main_is_running else { self.terminate(); return }
+    guard !sweety_bird_is_running else { self.terminate(); return }
 
-    // Listen for when the main application tells us to close.
+    // Listen for close_launcher message, and close if it tells us to.
     DistributedNotificationCenter.default().addObserver(
       self,
       selector: #selector(self.terminate),
       name: .close_launcher,
-      object: main_app_id
+      object: id
     )
     
     // Get our current path, and navigate up and over, to get the parent app that we are
@@ -44,8 +40,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     let main_app_path = NSString.path(withComponents: components)
     
-    // Launch familiar
+    // Launch sweety_bird
     NSWorkspace.shared.launchApplication(main_app_path)
   }
 }
 
+extension Notification.Name {
+    static let close_launcher = Notification.Name("close_launcher")
+}

@@ -710,10 +710,23 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="d4j-gP-urG">
+                                        <rect key="frame" x="411" y="8" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="Nel-9y-Mae"/>
+                                            <constraint firstAttribute="height" constant="32" id="pkM-RA-B0m"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSRefreshTemplate" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="PMW-ce-LdW">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="d4j-gP-urG" secondAttribute="trailing" constant="8" id="Bla-uU-kAd"/>
                                     <constraint firstItem="Wp8-Mb-54A" firstAttribute="leading" secondItem="1mN-Ib-zH1" secondAttribute="leading" constant="8" id="Fvy-dN-OBO"/>
                                     <constraint firstItem="Wp8-Mb-54A" firstAttribute="centerY" secondItem="1mN-Ib-zH1" secondAttribute="centerY" id="b7L-Wg-3UB"/>
+                                    <constraint firstItem="d4j-gP-urG" firstAttribute="centerY" secondItem="1mN-Ib-zH1" secondAttribute="centerY" id="ch5-4W-gn3"/>
                                     <constraint firstAttribute="height" constant="48" id="hNm-hg-AxR"/>
                                     <constraint firstItem="Lp2-SK-PUs" firstAttribute="centerY" secondItem="Wp8-Mb-54A" secondAttribute="centerY" id="peZ-3v-4Ps"/>
                                     <constraint firstItem="Lp2-SK-PUs" firstAttribute="centerX" secondItem="1mN-Ib-zH1" secondAttribute="centerX" id="yu7-aY-5PI"/>
@@ -745,6 +758,10 @@
                             <constraint firstItem="7w5-TU-cYa" firstAttribute="leading" secondItem="x5H-bH-Jle" secondAttribute="leading" id="xPS-qC-8Es"/>
                         </constraints>
                     </customView>
+                    <connections>
+                        <outlet property="refresh_button" destination="d4j-gP-urG" id="mYu-RQ-jhI"/>
+                        <outlet property="settings_button" destination="Wp8-Mb-54A" id="ly0-P6-cz1"/>
+                    </connections>
                 </viewController>
                 <customObject id="MS3-3t-wYR" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -773,11 +790,11 @@
                                 </collectionView>
                             </subviews>
                         </clipView>
-                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="o0O-FO-rZu">
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="o0O-FO-rZu">
                             <rect key="frame" x="1" y="144" width="233" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="D9L-FC-XSc">
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="D9L-FC-XSc">
                             <rect key="frame" x="234" y="1" width="15" height="143"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
@@ -794,5 +811,6 @@
     </scenes>
     <resources>
         <image name="NSFolderSmart" width="32" height="32"/>
+        <image name="NSRefreshTemplate" width="11" height="15"/>
     </resources>
 </document>
